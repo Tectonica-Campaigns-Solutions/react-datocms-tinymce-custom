@@ -178,6 +178,7 @@ export default function FieldExtension({ ctx }: Props) {
             "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
           setup: initialize,
           autoresize_bottom_margin: 10,
+          menubar: false,
         }}
         value={value}
         onEditorChange={handleChange}
