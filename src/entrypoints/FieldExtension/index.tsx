@@ -179,6 +179,7 @@ export default function FieldExtension({ ctx }: Props) {
           setup: initialize,
           autoresize_bottom_margin: 10,
           menubar: false,
+          color_map: ["000000", "Black", "FF0000", "Red"],
         }}
         value={value}
         onEditorChange={handleChange}
