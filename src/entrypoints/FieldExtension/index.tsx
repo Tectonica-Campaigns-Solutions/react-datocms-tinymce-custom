@@ -173,12 +173,7 @@ export default function FieldExtension({ ctx }: Props) {
         disabled={ctx.disabled}
         init={{
           plugins: "image advlist code emoticons link lists table autoresize",
-          toolbar:
-            "undo redo | formatselect | " +
-            "bold italic backcolor | link customimage |" +
-            "alignleft aligncenter " +
-            "alignright alignjustify | bullist numlist outdent indent | " +
-            "removeformat | emoticons | forecolor",
+          toolbar: "bold italic numlist bullist table link forecolor",
           content_style:
             "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
           setup: initialize,
