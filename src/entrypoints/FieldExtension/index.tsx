@@ -172,13 +172,18 @@ export default function FieldExtension({ ctx }: Props) {
       <ReactEditor
         disabled={ctx.disabled}
         init={{
-          plugins: "image advlist code emoticons link lists table autoresize",
-          toolbar: "bold italic numlist bullist table link forecolor",
+          plugins: "image advlist code emoticons link lists table autoresize ",
+          toolbar:
+            "bold italic numlist bullist table advtable link forecolor image",
           content_style:
             "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
           setup: initialize,
           autoresize_bottom_margin: 10,
           menubar: false,
+          table_class_list: [
+            { title: "None", value: "" },
+            { title: "Plans", value: "table_special_style" },
+          ],
           color_map: [
             "0066ff",
             "Ocean",
