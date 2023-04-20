@@ -178,7 +178,7 @@ export default function FieldExtension({ ctx }: Props) {
           content_style:
             "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
           setup: initialize,
-          autoresize_bottom_margin: 10,
+          autoresize_bottom_margin: 200,
           menubar: false,
           table_class_list: [
             { title: "None", value: "" },
