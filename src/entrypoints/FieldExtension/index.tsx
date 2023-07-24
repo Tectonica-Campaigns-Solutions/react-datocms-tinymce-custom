@@ -181,7 +181,7 @@ export default function FieldExtension({ ctx }: Props) {
           autoresize_bottom_margin: 200,
           menubar: false,
           table_class_list: [
-            { title: "None", value: "" },
+            { title: "None", value: "table_default_empty_style" },
             { title: "Plans", value: "table_special_style" },
           ],
           color_map: [
