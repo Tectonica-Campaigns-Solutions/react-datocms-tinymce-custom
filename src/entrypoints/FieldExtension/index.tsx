@@ -183,6 +183,7 @@ export default function FieldExtension({ ctx }: Props) {
           table_class_list: [
             { title: "None", value: "table_default_empty_style" },
             { title: "Plans", value: "table_special_style" },
+            { title: "Fluid", value: "table_fluid_style" },
           ],
           color_map: [
             "0066ff",
