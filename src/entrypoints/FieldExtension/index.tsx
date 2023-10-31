@@ -179,6 +179,15 @@ export default function FieldExtension({ ctx }: Props) {
             "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
           setup: initialize,
           autoresize_bottom_margin: 200,
+          formats: {
+            removeformat: [
+              { selector: "b,strong,em,i,font,u,strike,s", remove: "all" },
+
+              { selector: "span", classes: "red", remove: "empty" },
+
+              { selector: "span", classes: "green", remove: "none" },
+            ],
+          },
           menubar: false,
           table_class_list: [
             { title: "None", value: "table_default_empty_style" },
