@@ -152,6 +152,16 @@ export default function FieldExtension({ ctx }: Props) {
       onAction: handleDatoImages,
     });
 
+    editor.ui.registry.addButton("clearformatting", {
+      icon: "eraser", // You can use an appropriate icon
+      tooltip: "Clear Formatting",
+      onAction: () => {
+        editor.formatter.remove("bold");
+        editor.formatter.remove("italic");
+        // Add more formatting options to remove as needed
+      },
+    });
+
     editor.ui.registry.addContextToolbar("imagealignment", {
       // Shows image replacement options when selecting image
       predicate: (node) => {
@@ -174,20 +184,11 @@ export default function FieldExtension({ ctx }: Props) {
         init={{
           plugins: "image advlist code emoticons link lists table autoresize ",
           toolbar:
-            "bold italic numlist bullist table advtable link forecolor image",
+            "bold italic numlist bullist table advtable link forecolor image clearformatting",
           content_style:
             "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
           setup: initialize,
           autoresize_bottom_margin: 200,
-          formats: {
-            removeformat: [
-              { selector: "b,strong,em,i,font,u,strike,s", remove: "all" },
-
-              { selector: "span", classes: "red", remove: "empty" },
-
-              { selector: "span", classes: "green", remove: "none" },
-            ],
-          },
           menubar: false,
           table_class_list: [
             { title: "None", value: "table_default_empty_style" },
