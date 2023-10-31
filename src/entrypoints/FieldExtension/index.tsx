@@ -165,8 +165,9 @@ export default function FieldExtension({ ctx }: Props) {
         editor.execCommand("lineheight", false, "normal");
         editor.dom.addStyle(`
           a {
-            color: #ff0000;
+            color: #000 !important;
             text-decoration: underline;
+            font-weight: norma;
           }
         `);
       },
