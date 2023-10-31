@@ -153,11 +153,13 @@ export default function FieldExtension({ ctx }: Props) {
     });
 
     editor.ui.registry.addButton("clearformatting", {
-      icon: "eraser", // You can use an appropriate icon
+      icon: "eraser",
       tooltip: "Clear Formatting",
       onAction: () => {
         editor.formatter.remove("bold");
         editor.formatter.remove("italic");
+        editor.formatter.remove("color");
+        editor.formatter.remove("font");
         // Add more formatting options to remove as needed
       },
     });
