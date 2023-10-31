@@ -156,12 +156,13 @@ export default function FieldExtension({ ctx }: Props) {
       icon: "eraser",
       tooltip: "Clear Formatting",
       onAction: () => {
+        // Add more formatting options to remove as needed
         editor.formatter.remove("bold");
         editor.formatter.remove("italic");
-        editor.formatter.remove("color");
-        editor.formatter.remove("font");
-        editor.execCommand("removeFormat", false, null);
-        // Add more formatting options to remove as needed
+        editor.execCommand("fontSize", false, "16px");
+        editor.execCommand("forecolor", false, "#000000");
+        editor.execCommand("fontName", false, "Arial");
+        editor.execCommand("lineheight", false, "normal");
       },
     });
 
