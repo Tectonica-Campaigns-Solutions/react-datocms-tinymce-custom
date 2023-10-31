@@ -160,6 +160,7 @@ export default function FieldExtension({ ctx }: Props) {
         editor.formatter.remove("italic");
         editor.formatter.remove("color");
         editor.formatter.remove("font");
+        editor.execCommand("removeFormat", false, null);
         // Add more formatting options to remove as needed
       },
     });
