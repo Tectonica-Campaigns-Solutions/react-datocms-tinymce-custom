@@ -159,11 +159,14 @@ export default function FieldExtension({ ctx }: Props) {
         // Add more formatting options to remove as needed
         editor.formatter.remove("bold");
         editor.formatter.remove("italic");
+        editor.formatter.remove("hilitecolor");
+
         editor.execCommand("fontSize", false, "16px");
         editor.execCommand("forecolor", false, "#000000");
         editor.execCommand("fontName", false, "Arial");
         editor.execCommand("lineheight", false, "normal");
         editor.execCommand("hilitecolor", false, "transparent");
+
         editor.dom.addStyle(`
           a {
             color: #000 !important;
