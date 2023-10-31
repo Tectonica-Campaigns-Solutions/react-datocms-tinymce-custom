@@ -167,6 +167,13 @@ export default function FieldExtension({ ctx }: Props) {
         editor.execCommand("lineheight", false, "normal");
         editor.execCommand("hilitecolor", false, "transparent");
 
+        // Establecer el color de fondo del párrafo en blanco
+        const selectedNode = editor.selection.getNode();
+        if (selectedNode && selectedNode.nodeName === "P") {
+          // @ts-ignore
+          selectedNode.style.backgroundColor = "red";
+        }
+
         editor.dom.addStyle(`
           a {
             color: #000 !important;
