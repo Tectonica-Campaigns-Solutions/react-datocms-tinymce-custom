@@ -163,6 +163,7 @@ export default function FieldExtension({ ctx }: Props) {
         editor.execCommand("forecolor", false, "#000000");
         editor.execCommand("fontName", false, "Arial");
         editor.execCommand("lineheight", false, "normal");
+        editor.execCommand("hilitecolor", false, "transparent");
         editor.dom.addStyle(`
           a {
             color: #000 !important;
