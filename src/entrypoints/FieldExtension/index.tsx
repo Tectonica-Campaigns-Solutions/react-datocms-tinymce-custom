@@ -161,17 +161,17 @@ export default function FieldExtension({ ctx }: Props) {
         editor.formatter.remove("italic");
         editor.formatter.remove("hilitecolor");
 
-        editor.execCommand("fontSize", false, "16px");
-        editor.execCommand("forecolor", false, "#000000");
-        editor.execCommand("fontName", false, "Arial");
-        editor.execCommand("lineheight", false, "normal");
+        editor.execCommand("fontSize", false, "inherit");
+        editor.execCommand("forecolor", false, "inherit");
+        editor.execCommand("fontName", false, "inherit");
+        editor.execCommand("lineheight", false, "inherit");
         editor.execCommand("hilitecolor", false, "transparent");
 
         editor.dom.addStyle(`
           a {
-            color: #000 !important;
+            color: inherit !important;
             text-decoration: underline !important;
-            font-weight: normal !important;
+            font-weight: inherit !important;
           }
 
           * {
