@@ -163,7 +163,7 @@ export default function FieldExtension({ ctx }: Props) {
 
         editor.execCommand("fontSize", false, "inherit");
         editor.execCommand("forecolor", false, "inherit");
-        editor.execCommand("fontName", false, "inherit");
+        editor.execCommand("fontName", false, "Public Sans");
         editor.execCommand("lineheight", false, "inherit");
         editor.execCommand("hilitecolor", false, "transparent");
 
@@ -175,6 +175,8 @@ export default function FieldExtension({ ctx }: Props) {
           }
 
           * {
+            font-size: inherit;
+            font-family: "Public Sans";
             background-color: transparent !important;
           }
         `);
