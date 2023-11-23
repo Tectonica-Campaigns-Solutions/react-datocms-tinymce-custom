@@ -169,7 +169,7 @@ export default function FieldExtension({ ctx }: Props) {
 
         editor.dom.addStyle(`
           a {
-            color: inherit !important;
+            color: #0d6efd !important;
             text-decoration: underline !important;
             font-weight: inherit !important;
           }
