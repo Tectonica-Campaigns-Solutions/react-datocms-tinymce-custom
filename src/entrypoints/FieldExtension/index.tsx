@@ -206,7 +206,7 @@ export default function FieldExtension({ ctx }: Props) {
           plugins:
             "image advlist code emoticons link lists table autoresize advcode fullscreen",
           toolbar:
-            "bold italic numlist bullist table advtable link forecolor image clearformatting | code fullscreen",
+            "bold italic numlist bullist table advtable link forecolor image clearformatting | code",
           content_style:
             "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
           setup: initialize,
